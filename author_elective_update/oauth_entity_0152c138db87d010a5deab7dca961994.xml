@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity">
+    <oauth_entity action="DELETE">
+        <access>public</access>
+        <access_token_lifespan>1800</access_token_lifespan>
+        <active>true</active>
+        <auth_code_lifespan>60</auth_code_lifespan>
+        <auth_url/>
+        <certificate_url/>
+        <client_id>cd52c1386587d010853cf8186706c493</client_id>
+        <client_secret>G2trvBsoS7ux4IKAyg6EoQ==</client_secret>
+        <client_uuid>8d52c138db87d010a5deab7dca961993</client_uuid>
+        <code_challenge_method>S256</code_challenge_method>
+        <comments>Oauth to test ServiceNow integration - REST API Explorer</comments>
+        <default_grant_type>password</default_grant_type>
+        <id_token_lifespan>86400</id_token_lifespan>
+        <logo_url/>
+        <message_signature_lifespan>60</message_signature_lifespan>
+        <name>DevOAuth</name>
+        <oauth_api_script/>
+        <protocol_name/>
+        <public_client>false</public_client>
+        <redirect_url/>
+        <refresh_token_lifespan>8640000</refresh_token_lifespan>
+        <refresh_token_url/>
+        <revoke_token_url/>
+        <salt/>
+        <send_client_credentials_as>request_body_parameter</send_client_credentials_as>
+        <skip_authorize>false</skip_authorize>
+        <sys_class_name>oauth_entity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-01 23:03:42</sys_created_on>
+        <sys_id>0152c138db87d010a5deab7dca961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevOAuth</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>oauth_entity_0152c138db87d010a5deab7dca961994</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-01 23:03:42</sys_updated_on>
+        <token_url/>
+        <type>client</type>
+        <use_mutual_auth>false</use_mutual_auth>
+        <user/>
+    </oauth_entity>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>5ee26a33dbf7d3048264f70fbf961916</instance_id>
+        <instance_name>dev70567</instance_name>
+        <name>oauth_entity_0152c138db87d010a5deab7dca961994</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity"><oauth_entity action="INSERT_OR_UPDATE"><access>public</access><access_token_lifespan>1800</access_token_lifespan><active>true</active><auth_code_lifespan>60</auth_code_lifespan><auth_url/><certificate_url/><client_id>cd52c1386587d010853cf8186706c493</client_id><client_secret>G2trvBsoS7ux4IKAyg6EoQ==</client_secret><client_uuid>8d52c138db87d010a5deab7dca961993</client_uuid><code_challenge_method>S256</code_challenge_method><comments>Oauth to test ServiceNow integration - REST API Explorer</comments><default_grant_type>password</default_grant_type><id_token_lifespan>86400</id_token_lifespan><logo_url/><message_signature_lifespan>60</message_signature_lifespan><name>DevOAuth</name><oauth_api_script/><protocol_name/><public_client>false</public_client><redirect_url/><refresh_token_lifespan>8640000</refresh_token_lifespan><refresh_token_url/><revoke_token_url/><salt/><send_client_credentials_as>request_body_parameter</send_client_credentials_as><skip_authorize>false</skip_authorize><sys_class_name>oauth_entity</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-09-01 23:03:42</sys_created_on><sys_id>0152c138db87d010a5deab7dca961994</sys_id><sys_mod_count>0</sys_mod_count><sys_name>DevOAuth</sys_name><sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package><sys_policy/><sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope><sys_update_name>oauth_entity_0152c138db87d010a5deab7dca961994</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-09-01 23:03:42</sys_updated_on><token_url/><type>client</type><use_mutual_auth>false</use_mutual_auth><user/></oauth_entity></record_update>]]></payload>
+        <payload_hash>-1842841922</payload_hash>
+        <record_name>DevOAuth</record_name>
+        <reverted_from/>
+        <source>dae711e6dbb21010a5deab7dca96198a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-01 23:03:43</sys_created_on>
+        <sys_id>2472c938db87d010a5deab7dca9619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1744be96cc80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-01 23:03:43</sys_updated_on>
+        <type>Application Registries</type>
+        <update_guid>6c72c9385987d010e357acf9a126a6d9</update_guid>
+        <update_guid_history>6c72c9385987d010e357acf9a126a6d9:-1842841922</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="DevOAuth">6554e9bcdbc7d010a5deab7dca96190e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-02 01:31:47</sys_created_on>
+        <sys_db_object display_value="" name="oauth_entity">oauth_entity</sys_db_object>
+        <sys_id>43e13306b7ec4630a09bd3f68cc72a40</sys_id>
+        <sys_metadata>0152c138db87d010a5deab7dca961994</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevOAuth</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>oauth_entity_0152c138db87d010a5deab7dca961994</sys_update_name>
+        <sys_update_version display_value="oauth_entity_0152c138db87d010a5deab7dca961994">2472c938db87d010a5deab7dca9619da</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-02 01:31:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

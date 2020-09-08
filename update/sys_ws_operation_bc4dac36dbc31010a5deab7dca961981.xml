@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>getCount (v2)</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var requestQuery = request.queryParams.ni_query.toString();
+    var requestUser = request.queryParams.user_id.toString();
+    var user = new GlideRecord('sys_user');
+    user.get('user_name', requestUser);
+	gs.info('AM: User name '+user.user_name);
+	if(!user.user_name){
+		gs.info('1AM: User name '+user.user_name);
+		var myErr = new sn_ws_err.ServiceError();
+		myErr.setStatus(269);
+		myErr.setMessage("USer not found");
+		myErr.setDetail('Request for user id is not valid');
+		response.setError(myErr);
+		return;
+	}
+	gs.info('2AM: User name '+user.user_name);
+    var userNICount = new GlideAggregate('x_58872_needit_needit');
+    userNICount.addAggregate('COUNT');
+    userNICount.addQuery('u_requested_for', user.sys_id);
+    userNICount.addEncodedQuery(requestQuery);
+    userNICount.groupBy('u_request_type');
+    userNICount.query();
+    var needitRecs = 0;
+    var niUserRecs = [];
+    var needitRecsCount = 0;
+    while (userNICount.next()) {
+        needitRecs = userNICount.getAggregate('COUNT');
+        var reqType = userNICount.u_request_type.getDisplayValue();
+        niUserRecs.push({
+            "requestType": reqType,
+            "count": needitRecs
+        });
+        needitRecsCount = parseInt(needitRecsCount) + parseInt(needitRecs);
+    }
+
+    //Create a body object.  Add property value pairs to the body.
+    var body = {};
+    body.totalUserNIRecs = needitRecsCount;
+    body.catCounts = niUserRecs;
+    body.user = {
+        "User name": user.user_name,
+        "User ID": user.sys_id
+    };
+
+    //     var needItAgg = new GlideAggregate('x_58872_needit_needit');
+    //     needItAgg.addAggregate('COUNT');
+    //     needItAgg.addEncodedQuery(requestQuery + '^u_requested_for=' + user.sys_id);
+    //     needItAgg.groupBy('u_request_type');
+    //     needItAgg.query();
+    //     var needItcount = 0;
+    //     var niUserRecs = [];
+    //     var needitRecsCount = 0;
+    //     while (needItAgg.next()) {
+    //         needItcount = needItAgg.getAggregate('COUNT');
+    //         var reqType = needItAgg.u_request_type.getDisplayValue();
+    //         niUserRecs.push({
+    //             "requestType ": reqType,
+    //             "count: ": needItcount
+    //         });
+    //         needitRecsCount = parseInt(needitRecsCount) + parseInt(needItcount);
+    //     }
+    // 	var body = {};
+    //     body.totalCount = needItcount;
+    //     body.categoryCount = niUserRecs;
+    //     body.user = {
+    //         "name": user.user_name,
+    //         "sys_id": user.sys_id
+    //     };
+         response.setBody(body);
+
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_58872_needit/v2/needit_api/mycount</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/mycount</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-08 02:39:02</sys_created_on>
+        <sys_id>bc4dac36dbc31010a5deab7dca961981</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>getCount (v2)</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ws_operation_bc4dac36dbc31010a5deab7dca961981</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-08 03:02:23</sys_updated_on>
+        <web_service_definition display_value="NeedIt API">da30b3c1dbcf1410a5deab7dca96191c</web_service_definition>
+        <web_service_version display_value="v2">b84dac36dbc31010a5deab7dca96197f</web_service_version>
+    </sys_ws_operation>
+</record_update>
